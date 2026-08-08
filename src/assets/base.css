@@ -1,52 +1,149 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  --brand-primary: #ff5722;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* accent scale */
+  /* background */
+  --accent-1: #f9f6f5;
+  --accent-2: #fdeeea;
 
-  --vt-c-indigo: #2c3e50;
+  /* interactive */
+  --accent-3: #ffe2d8;
+  --accent-4: #ffcdbb;
+  --accent-5: #ffbea8;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* borders and separators */
+  --accent-6: #ffad92;
+  --accent-7: #fc9a7f;
+  /* focus rings */
+  --accent-8: #f18060;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  /* solid colors and  buttons */
+  --accent-9: #ff5722;
+  --accent-10: #f24701;
+
+  /* text colors */
+  --accent-11: #d42f00;
+  --accent-12: #5c2a1c;
+
+  /* gray scale */
+  /* background */
+  --gray-1: #f5f6f8;
+  --gray-2: #f0f3f7;
+
+  /* interactive */
+  --gray-3: #e6eaf0;
+  --gray-4: #dce2ea;
+  --gray-5: #d3dbe5;
+
+  /* borders and separators */
+  --gray-6: #cad3df;
+  --gray-7: #bfc8d3;
+  /* focus rings */
+  --gray-8: #acb5c0;
+
+  /* solid colors and  buttons */
+  --gray-9: #7f8792;
+  --gray-10: #747c87;
+
+  /* text colors */
+  --gray-11: #565e68;
+  --gray-12: #1a2029;
+
+  --bg-primary: var(--gray-1);
+  --bg-secondary: var(--gray-2);
+
+  --border-primary: var(--gray-6);
+
+  --text-white: #f5f6f8;
+  --text-brand: var(--accent-11);
+
+  --text-primary: var(--gray-12);
+  --text-secondary: var(--gray-11);
 }
 
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+:root[data-theme='dark'],
+.dark {
+  --brand-primary: #ff6e40;
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
+  --accent-1: #1d1614;
+  --accent-2: #231915;
+  --accent-3: #381e16;
+  --accent-4: #4d1d0d;
+  --accent-5: #5b2413;
+  --accent-6: #6a3120;
+  --accent-7: #81412e;
+  --accent-8: #a6543b;
+  --accent-9: #ff6e40;
+  --accent-10: #f26233;
+  --accent-11: #ff9a77;
+  --accent-12: #ffdbce;
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --gray-1: #131820;
+  --gray-2: #1a1f26;
+  --gray-3: #202732;
+  --gray-4: #242d3b;
+  --gray-5: #283444;
+  --gray-6: #2e3c50;
+  --gray-7: #384961;
+  --gray-8: #4c6282;
+  --gray-9: #597091;
+  --gray-10: #667d9f;
+  --gray-11: #a1b5d3;
+  --gray-12: #e9eff6;
 
-  --section-gap: 160px;
+  --bg-primary: var(--gray-1);
+  --bg-secondary: var(--gray-2);
+
+  --border-primary: var(--gray-6);
+
+  --text-white: #f5f6f8;
+  --text-brand: var(--accent-11);
+
+  --text-primary: var(--gray-12);
+  --text-secondary: var(--gray-11);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
+  :root:not([data-theme='light']) {
+    --brand-primary: #ff6e40;
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    --accent-1: #1d1614;
+    --accent-2: #231915;
+    --accent-3: #381e16;
+    --accent-4: #4d1d0d;
+    --accent-5: #5b2413;
+    --accent-6: #6a3120;
+    --accent-7: #81412e;
+    --accent-8: #a6543b;
+    --accent-9: #ff6e40;
+    --accent-10: #f26233;
+    --accent-11: #ff9a77;
+    --accent-12: #ffdbce;
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --gray-1: #131820;
+    --gray-2: #1a1f26;
+    --gray-3: #202732;
+    --gray-4: #242d3b;
+    --gray-5: #283444;
+    --gray-6: #2e3c50;
+    --gray-7: #384961;
+    --gray-8: #4c6282;
+    --gray-9: #597091;
+    --gray-10: #667d9f;
+    --gray-11: #a1b5d3;
+    --gray-12: #e9eff6;
+
+    --bg-primary: var(--gray-1);
+    --bg-secondary: var(--gray-2);
+
+    --border-primary: var(--gray-6);
+
+    --text-white: #ffffff;
+    --text-brand: var(--accent-11);
+
+    --text-primary: var(--gray-12);
+    --text-secondary: var(--gray-11);
   }
 }
 
@@ -60,8 +157,8 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -79,7 +176,7 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
