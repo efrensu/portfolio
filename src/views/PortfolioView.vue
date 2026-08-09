@@ -27,6 +27,10 @@ const stackList = [
   'Git & GitHub',
 ]
 
+function navToWorkPage() {
+  window.location.href = '/work'
+}
+
 function navToGithub() {
   window.location.href = 'https://github.com/efrensu?tab=repositories'
 }
@@ -45,7 +49,7 @@ function navToGithub() {
         never notice until they're missing.
       </p>
       <div class="flex-row-1 items-center">
-        <PBtn type="primary">View My Work</PBtn>
+        <PBtn type="primary" @click="navToWorkPage">View My Work</PBtn>
         <PBtn type="outline">Download Resume</PBtn>
       </div>
     </div>
@@ -55,14 +59,14 @@ function navToGithub() {
         <h2 class="header-2 bolden-2">Projects</h2>
         <p class="text-1 text-secondary">git log --experience</p>
       </div>
-      <div class="flex-col-3 py-12 px-4">
+      <div class="flex-col-3 py-12">
         <div class="flex-col-1 card-brand">
           <p class="text-1">Role: Frontend Developer &bullet; Contributor</p>
           <div>
             <h3 class="header-3 bolden-1">Restaurant CRM Platform</h3>
             <p class="text-1">Reservations, Memberships & ops CRM</p>
           </div>
-          <p class="text-1 text-secondary">
+          <p class="text-1 text-brand">
             Founded and architected the frontend for a restaurant CRM handling reservations, guest
             and paid memberships, business metrics, and a guided member onboarding flow.
           </p>
