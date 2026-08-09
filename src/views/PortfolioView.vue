@@ -73,7 +73,7 @@ function navToGithub() {
             </div>
           </div>
           <div class="flex-row-1">
-            <div v-for="stack in resturantCRMStack" :key="stack" class="text-1 text-secondary">
+            <div v-for="stack in resturantCRMStack" :key="stack" class="chip">
               <p>{{ stack }}</p>
             </div>
           </div>
@@ -96,7 +96,7 @@ function navToGithub() {
             </div>
           </div>
           <div class="flex-row-1">
-            <div v-for="stack in memberAppStack" :key="stack" class="text-1 text-secondary">
+            <div v-for="stack in memberAppStack" :key="stack" class="chip">
               <p>{{ stack }}</p>
             </div>
           </div>
@@ -127,7 +127,7 @@ function navToGithub() {
         <div class="flex-col-1">
           <p class="text-1 text-brand">// stack</p>
           <div class="flex-row-1 flex-wrap">
-            <div v-for="stack in stackList" :key="stack" class="text-1 text-secondary">
+            <div v-for="stack in stackList" :key="stack" class="chip">
               {{ stack }}
             </div>
           </div>
