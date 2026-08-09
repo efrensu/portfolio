@@ -1,0 +1,9 @@
+.card-brand {
+  padding: 0rem 1rem;
+  border-left: 4px solid var(--accent-7);
+}
+
+.card-grey {
+  padding: 0rem 1rem;
+  border-left: 4px solid var(--gray-7);
+}

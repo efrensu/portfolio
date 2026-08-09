@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  type: 'primary' | 'secondary' | 'outline'
+  type: 'primary' | 'secondary' | 'outline' | 'underline'
   size?: 'sm' | 'md' | 'lg'
 }>()
 </script>

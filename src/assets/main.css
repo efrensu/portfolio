@@ -1,5 +1,6 @@
 @import './base.css';
 @import './components/button.css';
+@import './components/card.css';
 @import './typography.css';
 @import './layout.css';
 @import 'tailwindcss';

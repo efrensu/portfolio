@@ -1,5 +1,35 @@
 <script setup lang="ts">
 import PBtn from '@/components/ui/PBtn.vue'
+
+const resturantCRMList = [
+  'Initiated the project from zero: chose the core stack, configured tooling, and built the design system — type, color, base styles, and the shared component library the team built on',
+  'Led the initial build before handing it off to prioritize higher-priority work elsewhere',
+  "Worked primarily on the frontend, regularly adjusting API payloads and validation when data contracts didn't match what the UI needed",
+]
+const resturantCRMStack = ['Vue', 'Vuetify', 'PHP', 'MySQL']
+
+const memberAppList = [
+  'Owned key parts of the onboarding and dashboard experience',
+  'Audited existing flows to identify and remove redundant screens, simplifying the path members took to get where they needed to go',
+  'Designed micro-interactions to smooth transitions and make state changes — updates, loading states — more visible and legible',
+]
+const memberAppStack = ['React Native', 'PHP', 'MySQL']
+
+const stackList = [
+  'Next.js',
+  'TypeScript',
+  'React',
+  'Prisma',
+  'Tailwind',
+  'Vue.js',
+  'Node.js',
+  'REST APIs',
+  'Git & GitHub',
+]
+
+function navToGithub() {
+  window.location.href = 'https://github.com/efrensu?tab=repositories'
+}
 </script>
 
 <template>
@@ -21,9 +51,102 @@ import PBtn from '@/components/ui/PBtn.vue'
     </div>
 
     <section id="experience" class="flex-col-3 py-12 line-top">
-      <div class="flex-row-1 justify-between items-end">
-        <h2 class="header-2 bolden-2">Experience</h2>
+      <div class="flex-row-1 flex-wrap justify-between items-end">
+        <h2 class="header-2 bolden-2">Projects</h2>
         <p class="text-1 text-secondary">git log --experience</p>
+      </div>
+      <div class="flex-col-3 py-12 px-4">
+        <div class="flex-col-1 card-brand">
+          <p class="text-1">Role: Frontend Developer &bullet; Contributor</p>
+          <div>
+            <h3 class="header-3 bolden-1">Restaurant CRM Platform</h3>
+            <p class="text-1">Reservations, Memberships & ops CRM</p>
+          </div>
+          <p class="text-1 text-secondary">
+            Founded and architected the frontend for a restaurant CRM handling reservations, guest
+            and paid memberships, business metrics, and a guided member onboarding flow.
+          </p>
+          <div class="px-2">
+            <div v-for="item in resturantCRMList" :key="item" class="flex flex-row gap-2 text-1">
+              <p class="text-brand">&bullet;</p>
+              <p>{{ item }}</p>
+            </div>
+          </div>
+          <div class="flex-row-1">
+            <div v-for="stack in resturantCRMStack" :key="stack" class="text-1 text-secondary">
+              <p>{{ stack }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-col-1 card-grey">
+          <p class="text-1">Role: Frontend Developer &bullet; Contributor</p>
+          <div>
+            <h3 class="header-3 bolden-1">Member Companion App</h3>
+            <p class="text-1">Member-facing mobile app</p>
+          </div>
+          <p class="text-1 text-secondary">
+            Built the member-facing counterpart to the CRM above — a React Native app members use
+            after purchasing a paid membership to manage their account and access perks.
+          </p>
+          <div class="px-2">
+            <div v-for="item in memberAppList" :key="item" class="flex flex-row gap-2 text-1">
+              <p class="text-secondary">&bullet;</p>
+              <p>{{ item }}</p>
+            </div>
+          </div>
+          <div class="flex-row-1">
+            <div v-for="stack in memberAppStack" :key="stack" class="text-1 text-secondary">
+              <p>{{ stack }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="flex-col-3 py-12 line-top">
+      <div class="flex-row-1 flex-wrap justify-between items-end">
+        <h2 class="header-2 bolden-2">About</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 py-12 px-4">
+        <div class="flex-col-1">
+          <p>
+            I'm a frontend-focused engineer who's comfortable owning a UI from a blank config file
+            to a production codebase — and just as comfortable being handed someone else's mess and
+            making it make sense again.
+          </p>
+
+          <p>
+            Outside of client work, I'm building a full-stack project management app end-to-end —
+            auth, role-based permissions, real-time collaboration — as a space to make my own
+            architecture calls without a deadline attached.
+          </p>
+        </div>
+
+        <div class="flex-col-1">
+          <p class="text-1 text-brand">// stack</p>
+          <div class="flex-row-1 flex-wrap">
+            <div v-for="stack in stackList" :key="stack" class="text-1 text-secondary">
+              {{ stack }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="flex-col-3 py-12 line-top">
+      <div class="flex-row-2 flex-wrap justify-between">
+        <h2 class="header-2 bolden-2">Contact</h2>
+        <div class="flex-col-1">
+          <PBtn type="underline" size="sm">email &RightArrow; efrensuarezgonzalez@gmail.com</PBtn>
+          <PBtn type="underline" size="sm" @click="navToGithub">
+            github &RightArrow; github.com/efrensu
+          </PBtn>
+          <PBtn type="underline" size="sm">
+            linkedin &RightArrow; efrensuarezgonzalez@gmail.com
+          </PBtn>
+        </div>
       </div>
     </section>
   </main>
