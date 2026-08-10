@@ -39,6 +39,8 @@
 }
 
 .header-layout {
+  position: sticky;
+  top: 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -46,6 +48,7 @@
   width: 100%;
   min-height: 4.5rem;
   background-color: var(--bg-secondary);
+  z-index: 10;
 }
 
 .main-header {
