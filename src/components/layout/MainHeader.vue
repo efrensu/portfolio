@@ -11,7 +11,11 @@ function navToHome() {
         <img src="@/assets/images/portfolio-logo.svg" alt="Logo" width="40" />
         <p class="header-5">Efren Suarez</p>
       </div>
-      <p>Links</p>
+      <div class="flex-row-1">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </div>
 </template>

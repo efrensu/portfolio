@@ -11,6 +11,8 @@
 html {
   min-height: 100vh;
   background: var(--bg-secondary);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 #app {
@@ -31,6 +33,10 @@ main {
   max-width: 1280px;
   flex-grow: 1;
   background: var(--bg-primary);
+}
+
+section[id] {
+  scroll-margin-top: 4.5rem;
 }
 
 @media (min-width: 1024px) {

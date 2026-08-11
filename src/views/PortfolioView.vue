@@ -54,7 +54,7 @@ function navToGithub() {
       </div>
     </div>
 
-    <section id="experience" class="flex-col-3 py-12 line-top">
+    <section id="projects" class="flex-col-3 py-12 line-top">
       <div class="flex-row-1 flex-wrap justify-between items-end">
         <h2 class="header-2 bolden-2">Projects</h2>
         <p class="text-1 text-secondary">git log --experience</p>
