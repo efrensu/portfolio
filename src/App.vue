@@ -6,6 +6,8 @@ import { RouterView } from 'vue-router'
 
 <template>
   <MainHeader />
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
   <MainFooter />
 </template>
