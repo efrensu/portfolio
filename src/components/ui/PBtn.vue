@@ -1,8 +1,14 @@
 <script setup lang="ts">
-defineProps<{
-  type: 'primary' | 'secondary' | 'outline' | 'underline'
-  size?: 'sm' | 'md' | 'lg'
-}>()
+withDefaults(
+  defineProps<{
+    type?: 'primary' | 'secondary' | 'outline' | 'underline' | 'text'
+    size?: 'sm' | 'md' | 'lg'
+  }>(),
+  {
+    type: 'primary',
+    size: 'md',
+  },
+)
 </script>
 
 <template>

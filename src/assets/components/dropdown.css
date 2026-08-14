@@ -1,0 +1,25 @@
+@import '@/assets/base.css';
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+}
+
+.dropdown-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  min-width: 100%;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  z-index: 20;
+}

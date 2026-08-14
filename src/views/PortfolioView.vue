@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { PhFileText } from '@phosphor-icons/vue'
 import PBtn from '@/components/ui/PBtn.vue'
+import PDropDown from '@/components/ui/PDropDown.vue'
 
 const resturantCRMList = [
   'Initiated the project from zero: chose the core stack, configured tooling, and built the design system — type, color, base styles, and the shared component library the team built on',
@@ -31,12 +33,20 @@ function navToWorkPage() {
   window.location.href = '/work'
 }
 
+function viewResume() {
+  window.open('/Efren_Suarez_Gonzalez_Resume.pdf', '_blank')
+}
+
+function downloadResume() {
+  console.log('Downloading resume...')
+}
+
 function openEmailApp() {
   window.location.href = 'mailto:efrensuarezgonzalez@gmail.com'
 }
 
 function navToGithub() {
-  window.location.href = 'https://github.com/efrensu?tab=repositories'
+  window.open('https://github.com/efrensu?tab=repositories', '_blank')
 }
 </script>
 
@@ -53,7 +63,13 @@ function navToGithub() {
     </p>
     <div class="flex-row-1 items-center">
       <PBtn type="primary" @click="navToWorkPage">View My Work</PBtn>
-      <PBtn type="outline">Download Resume</PBtn>
+      <PDropDown type="outline" size="md">
+        <template #activator><PhFileText size="18" /> Resume </template>
+        <div class="flex-col-1">
+          <PBtn type="text" size="md" @click="viewResume">View</PBtn>
+          <PBtn type="text" size="md" @click="downloadResume">Download</PBtn>
+        </div>
+      </PDropDown>
     </div>
   </div>
 

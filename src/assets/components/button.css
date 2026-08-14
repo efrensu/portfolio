@@ -3,6 +3,7 @@
 .btn {
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
   line-height: 1;
   font-weight: 400;
 }
@@ -44,6 +45,10 @@
   background-color: transparent;
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-primary);
+}
+
+.btn-text:hover {
+  color: var(--accent-9);
 }
 
 .btn-lg {

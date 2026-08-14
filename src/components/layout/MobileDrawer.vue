@@ -41,12 +41,17 @@ const closeMenu = () => {
 /* Smooth slide and fade animation for the drawer */
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .slide-fade-enter-active .overlay,
 .slide-fade-leave-active .overlay {
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-fade-enter-active aside,
+.slide-fade-leave-active aside {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slide-fade-enter-from,
