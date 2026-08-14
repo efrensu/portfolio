@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { watch, onUnmounted } from 'vue'
 import { PhX } from '@phosphor-icons/vue'
 
-defineProps<{
+const props = defineProps<{
   isMenuOpen: boolean
 }>()
 
@@ -12,6 +13,26 @@ const emit = defineEmits<{
 const closeMenu = () => {
   emit('closeMenu')
 }
+
+watch(
+  () => props.isMenuOpen,
+  (isOpen) => {
+    if (typeof window !== 'undefined') {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = ''
+      }
+    }
+  },
+  { immediate: true },
+)
+
+onUnmounted(() => {
+  if (typeof window !== 'undefined') {
+    document.body.style.overflow = ''
+  }
+})
 </script>
 
 <template>
