@@ -31,6 +31,10 @@ function navToWorkPage() {
   window.location.href = '/work'
 }
 
+function openEmailApp() {
+  window.location.href = 'mailto:efrensuarezgonzalez@gmail.com'
+}
+
 function navToGithub() {
   window.location.href = 'https://github.com/efrensu?tab=repositories'
 }
@@ -143,13 +147,15 @@ function navToGithub() {
       <div class="flex-row-2 flex-wrap justify-between">
         <h2 class="header-2 bolden-2">Contact</h2>
         <div class="flex-col-1">
-          <PBtn type="underline" size="sm">email &RightArrow; efrensuarezgonzalez@gmail.com</PBtn>
+          <PBtn type="underline" size="sm" @click="openEmailApp"
+            >email &RightArrow; efrensuarezgonzalez@gmail.com</PBtn
+          >
           <PBtn type="underline" size="sm" @click="navToGithub">
             github &RightArrow; github.com/efrensu
           </PBtn>
-          <PBtn type="underline" size="sm">
+          <!-- <PBtn type="underline" size="sm">
             linkedin &RightArrow; efrensuarezgonzalez@gmail.com
-          </PBtn>
+          </PBtn> -->
         </div>
       </div>
     </section>
