@@ -37,8 +37,25 @@ function viewResume() {
   window.open('/Efren_Suarez_Gonzalez_Resume.pdf', '_blank')
 }
 
-function downloadResume() {
-  console.log('Downloading resume...')
+async function downloadResume() {
+  try {
+    const response = await fetch('/Efren_Suarez_Gonzalez_Resume.pdf')
+    if (!response.ok) throw new Error('Failed to fetch resume')
+
+    const blob = await response.blob()
+
+    const blobUrl = window.URL.createObjectURL(blob)
+
+    const link = document.createElement('a')
+    link.href = blobUrl
+    link.download = 'Efren_Suarez_Gonzalez_Resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    window.URL.revokeObjectURL(blobUrl)
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 function openEmailApp() {

@@ -1,73 +1,54 @@
-# portfolio
+# Personal Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite.
+A clean, responsive, and accessible personal web development portfolio built with **Vue 3**, **Vite**, and **Tailwind CSS**.
 
-## Recommended IDE Setup
+🚀 **Live Demo:** [efrensuarez.com](https://efrensuarez.com) _(Replace with your live URL or Vercel/Netlify link)_
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 🛠️ Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Framework:** [Vue 3](https://vuejs.org/) (Composition API with `<script setup lang="ts">`)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [@phosphor-icons/vue](https://phosphoricons.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## ✨ Features
 
-## Customize configuration
+- **Responsive Design:** Mobile-first layout featuring a custom off-canvas mobile drawer (`MobileDrawer.vue`) with smooth slide transitions and scroll-locking.
+- **Resume Viewer & Direct Download:** Custom dropdown component allowing visitors to either view the PDF in-browser or fetch it directly as a binary blob download.
+- **Custom UI Components:** Reusable button (`PBtn`) and dropdown (`PDropDown`) components built with flexible slot interfaces.
+- **404 Routing:** Complete SPA fallback handling with Vue Router catch-all matching for clean navigation errors.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 💻 Local Development Setup
 
-```sh
+To run this project locally:
+
+**Clone the repository:**
+
+````bash
+git clone [https://github.com/your-username/portfolio.git](https://github.com/your-username/portfolio.git)
+cd portfolio
+
+## Install Dependencies
+
+```bash
 npm install
-```
+````
 
-### Compile and Hot-Reload for Development
+### Start the development server
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Build for production
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
