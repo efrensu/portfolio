@@ -14,8 +14,10 @@
 
 .dropdown-menu {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   right: 0;
-  min-width: 100%;
+  width: 100%;
   background-color: var(--bg-primary);
   border: 1px solid var(--border-primary);
   border-radius: 0.5rem;

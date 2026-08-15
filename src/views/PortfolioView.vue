@@ -82,10 +82,8 @@ function navToGithub() {
       <PBtn type="primary" @click="navToWorkPage">View My Work</PBtn>
       <PDropDown type="outline" size="md">
         <template #activator><PhFileText size="18" /> Resume </template>
-        <div class="flex-col-1">
-          <PBtn type="text" size="md" @click="viewResume">View</PBtn>
-          <PBtn type="text" size="md" @click="downloadResume">Download</PBtn>
-        </div>
+        <PBtn type="text" size="md" @click="viewResume">View</PBtn>
+        <PBtn type="text" size="md" @click="downloadResume">Download</PBtn>
       </PDropDown>
     </div>
   </div>

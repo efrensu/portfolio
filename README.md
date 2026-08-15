@@ -57,5 +57,6 @@ npm run build
 
 ### 👤 Author
 
-- Efren Suarez
-  Website: efrensuarez.dev
+Efren Suarez
+
+- Website: efrensuarez.dev
