@@ -2,8 +2,7 @@
 
 A clean, responsive, and accessible personal web development portfolio built with **Vue 3**, **Vite**, and **Tailwind CSS**.
 
-🚀 **Live Demo:** [efrensuarez.com](https://efrensuarez.com) _(Replace with your live URL or Vercel/Netlify link)_
-
+🚀 **Live Demo:** [efrensuarez.dev](https://efrensuarez.dev/)
 ---
 
 ## 🛠️ Tech Stack
@@ -31,15 +30,16 @@ To run this project locally:
 
 **Clone the repository:**
 
-````bash
-git clone [https://github.com/your-username/portfolio.git](https://github.com/your-username/portfolio.git)
+```bash
+git clone [https://github.com/efrensu/portfolio](https://github.com/efrensu/portfolio)
 cd portfolio
+```
 
-## Install Dependencies
+## Install Dependencies (Note: You may need --legacy-peer-deps depending on your local Node/npm version)
 
 ```bash
 npm install
-````
+```
 
 ### Start the development server
 
@@ -49,6 +49,13 @@ npm run dev
 
 ### Build for production
 
-```sh
+```bash
 npm run build
 ```
+
+---
+
+### 👤 Author
+
+- Efren Suarez
+  Website: efrensuarez.dev
