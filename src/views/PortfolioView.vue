@@ -38,23 +38,40 @@ function viewResume() {
 }
 
 async function downloadResume() {
-  try {
-    const response = await fetch('/Efren_Suarez_Gonzalez_Resume.pdf')
-    if (!response.ok) throw new Error('Failed to fetch resume')
+  const pdfUrl = '/resume.pdf'
+  const fileName = 'Efren_Suarez_Resume.pdf'
+  // Detect mobile devices (iOS / Android)
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
-    const blob = await response.blob()
-
-    const blobUrl = window.URL.createObjectURL(blob)
-
+  if (isMobile) {
+    // On mobile, navigate directly or open in a new tab so the browser's native PDF viewer/downloader takes over
     const link = document.createElement('a')
-    link.href = blobUrl
-    link.download = 'Efren_Suarez_Gonzalez_Resume.pdf'
+    link.href = pdfUrl
+    link.download = fileName
+    link.target = '_blank' // Guarantees it opens/downloads on mobile without being blocked
+    link.rel = 'noopener noreferrer'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    window.URL.revokeObjectURL(blobUrl)
-  } catch (error) {
-    console.error(error)
+  } else {
+    try {
+      const response = await fetch('/Efren_Suarez_Gonzalez_Resume.pdf')
+      if (!response.ok) throw new Error('Failed to fetch resume')
+
+      const blob = await response.blob()
+
+      const blobUrl = window.URL.createObjectURL(blob)
+
+      const link = document.createElement('a')
+      link.href = blobUrl
+      link.download = 'Efren_Suarez_Gonzalez_Resume.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(blobUrl)
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
 
